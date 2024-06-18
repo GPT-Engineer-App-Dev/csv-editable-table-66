@@ -16,8 +16,8 @@ const Index = () => {
         header: true,
         skipEmptyLines: true,
         complete: (result) => {
-          setHeaders(result.meta.fields);
-          setData(result.data);
+          setHeaders(result.meta.fields || []);
+          setData(result.data || []);
         },
       });
     }
